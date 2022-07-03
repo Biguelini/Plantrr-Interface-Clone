@@ -4,6 +4,7 @@ import 'package:plantrr/screens/productPage.dart';
 import 'screens/index.dart';
 
 void main() => runApp(MaterialApp(
+  
       initialRoute: '/',
       routes: {
         '/': (context) => const Index(),
