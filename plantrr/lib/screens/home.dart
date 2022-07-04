@@ -29,6 +29,7 @@ class Home extends StatelessWidget {
                   child: Icon(
                     Icons.sort,
                     size: 30,
+                    color: Color(0XFF03053D),
                   ),
                 )
               ],
@@ -43,54 +44,58 @@ class Home extends StatelessWidget {
                       childAspectRatio: (160 / 240),
                       shrinkWrap: true,
                       children: List.generate(6, (index) {
-                        return Card(
-                          elevation: 0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(18),
-                            child: Column(children: [
-                              Image.network(
-                                'https://www.kirosa.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/w/h/whatsapp_image_2020-09-12_at_13.27.13_1_.jpeg',
-                                width: 120,
-                                height: 140,
-                                fit: BoxFit.cover,
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                        return GestureDetector(
+                          onTap: () =>
+                              {Navigator.pushNamed(context, '/productPage')},
+                          child: Card(
+                            elevation: 0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(18),
+                              child: Column(children: [
+                                Image.network(
+                                  'https://media.glamour.com/photos/5ea89429e67f360008b064d8/master/w_1172,h_1412,c_limit/Pink%20Anthurium.png',
+                                  width: 120,
+                                  height: 140,
+                                  fit: BoxFit.cover,
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 8),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: const [
+                                      Text(
+                                        "Cactus",
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Color(0XFFCCCCCB),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Row(
                                   children: const [
                                     Text(
-                                      "Cactus",
+                                      "\$14",
                                       style: TextStyle(
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Inter",
                                         fontSize: 14,
                                       ),
-                                    ),
-                                    Icon(
-                                      Icons.favorite_border_outlined,
-                                      color: Color(0XFFCCCCCB),
                                     )
                                   ],
-                                ),
-                              ),
-                              Row(
-                                children: const [
-                                  Text(
-                                    "\$14",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: "Inter",
-                                      fontSize: 14,
-                                    ),
-                                  )
-                                ],
-                              )
-                            ]),
+                                )
+                              ]),
+                            ),
                           ),
                         );
                       }),
