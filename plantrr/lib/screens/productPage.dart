@@ -43,7 +43,7 @@ class ProductPage extends StatelessWidget {
                         topRight: Radius.circular(50)),
                     color: Colors.white,
                   ),
-                  height: 330,
+                  height: 350,
                   width: MediaQuery.of(context).size.width,
                   child: Padding(
                     padding: const EdgeInsets.all(24),
